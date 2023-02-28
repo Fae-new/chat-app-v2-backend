@@ -74,5 +74,5 @@ socket.on('add_contact',(data)=>{
 
 
 
-start()
+start();
 
