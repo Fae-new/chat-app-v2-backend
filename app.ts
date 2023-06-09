@@ -33,9 +33,9 @@ const io = new Server(server, {
 
 
 const start = async () => {
-    if (process.env.MONGO_URI) {
+    if ('mongodb+srv://jay:jay123456@cluster0.cw4vt.mongodb.net/chat-app?retryWrites=true&w=majority') {
         try {
-            await connectDB(process.env.MONGO_URI)
+            await connectDB('mongodb+srv://jay:jay123456@cluster0.cw4vt.mongodb.net/chat-app?retryWrites=true&w=majority')
             server.listen(process.env.PORT||3000, () => {
                 console.log('server started');
 
@@ -74,5 +74,5 @@ socket.on('add_contact',(data)=>{
 
 
 
-start();
+start()
 
